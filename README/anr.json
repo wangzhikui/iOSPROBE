@@ -1,0 +1,44 @@
+[
+    {
+        "header": {
+            "tid": "\(tid)",
+            "appid": "\(appid)",
+            "pt": "anr",
+            "srid": "-1",
+            "platform": "ios",
+            "name": "\(displayName)",
+            "version": "\(appVersion)",
+            "packageid": "",
+            "osname": "ios",
+            "osversion": "\(iosVersion)",
+            "model": "",
+            "agentname": "\(agentname)",
+            "agentver": "\(agentver)",
+            "deviceid": "\(String(describing: identifierNumber))",
+            "province": "北京",
+            "city": "北京",
+            "manufacturer": "\(modelName)"
+        },
+        "content": [
+            {
+                "uuid": "",
+                "pid": 22327,
+                "describe": "",
+                "occurpackage": "",
+                "stacktrace": "",
+                "occurlocation": "",
+                "otherthreads": "",
+                "trace": "null",
+                "message": "",
+                "ts": 1504577221876,
+                "root": false,
+                "sdcardtotal": 0,
+                "sdcardavai": 0,
+                "totalspace": 56838112,
+                "freespace": 30923808,
+                "totalmemory": 3813596,
+                "freememory": 867404
+            }
+        ]
+    }
+]

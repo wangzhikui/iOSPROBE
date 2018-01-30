@@ -1,0 +1,30 @@
+[{
+	"header":{
+		"tid":"JsVkXHdqTG1878285484",
+		"appid":"TZbafrPAmp1880722139",
+		"pt":"device",
+		"srid":"-1",
+		"platform":"Android"
+	},
+	"content":[
+		{
+			"agentname": "AndroidAgent",
+			"agentver": "1.0.0",
+			"country": "",
+			"deviceid": "cde336a7-6921-4d07-9a92-d37f8d915dd7",
+			"manufacturer": "HUAWEI",
+			"misc": {
+				"platform": "Native",
+				"platver": "1.0.0",
+				"size": "normal"
+			},
+			"model": "KNT-AL20",
+			"osname": "Android",
+			"osversion": "7.0",
+			"region": "",
+			"hostip":"10.6.225.112",
+			"province":"北京",
+			"city":"北京"
+		}
+	]
+}]

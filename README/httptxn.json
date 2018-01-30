@@ -1,0 +1,26 @@
+[{
+	"header":{
+		"tid":"JsVkXHdqTG1878285484",
+		"appid":"TZbafrPAmp1880722139",
+		"pt":"httptxn",
+		"srid":"-1",
+		"platform":"Android"
+	},
+	"content":[
+		{
+			"appdata": "null",
+			"busiid": "15cce61545c0000d3ba102d1f13ffc450d2",
+			"bytercv": 370,
+			"bytesent": 50,
+			"carrier": "wifi",
+			"deviceid": "cde336a7-6921-4d07-9a92-d37f8d915dd7",
+			"error": 0,
+			"method": "POST",
+			"status": 200,
+			"total": 193.0,
+			"txid": "null",
+			"url": "http://10.2.112.58/xinhu/api.php",
+			"wan": "wifi"
+		}
+	]
+}]

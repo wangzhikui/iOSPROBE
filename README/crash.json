@@ -1,0 +1,112 @@
+[
+    {
+        "content": [
+            {
+                "activity": [
+                    {
+                        "name": "Display MainActivity",
+                        "timestamp": 1498099516204
+                    },
+                    {
+                        "name": "Display LoginActivity",
+                        "timestamp": 1498099518578
+                    }
+                ],
+                "app": {
+                    "build": "5",
+                    "bundle": "com.rock.xinhuapk",
+                    "name": "办公OA",
+                    "process": 0,
+                    "ver": "1.1.5"
+                },
+                "apptoken": "JsVkXHdqTG1878285484#TZbafrPAmp1880722139",
+                "buildid": "a6ce07db-0f3f-4481-a17b-c2e2d45e9c88",
+                "device": {
+                    "archit": "aarch64",
+                    "deviceid": "e647ede3-3023-4019-8ef6-51658e8224bf",
+					"hostip":"10.6.225.112",
+					"province":"北京",
+					"city":"北京",
+                    "disk": {
+                        "extern": 37458702336,
+                        "root": 70361088
+                    },
+                    "dvname": "HUAWEI",
+                    "memory": 69,
+                    "model": "KNT-AL20",
+                    "netsts": "wifi",
+                    "orient": 1,
+                    "osbuild": "C00B385",
+                    "osver": "7.0",
+                    "runtime": "2.1.0",
+                    "screen": "normal"
+                },
+                "ex": {
+                    "cause": "Test by YYY",
+                    "name": "java.lang.NullPointerException"
+                },
+                "platform": "Android",
+                "protocol": 1,
+                "thread": [
+                    {
+                        "crashed": true,
+                        "id": "main",
+                        "number": 1,
+                        "priority": 5,
+                        "stack": [
+                            {
+                                "class": "com.rock.xinhuapk.LoginActivity",
+                                "file": "LoginActivity.java",
+                                "lineno": 128,
+                                "method": "logincheck"
+                            },
+                            {
+                                "class": "com.rock.xinhuapk.LoginActivity",
+                                "file": "LoginActivity.java",
+                                "lineno": 73,
+                                "method": "ViewClick"
+                            }
+                        ],
+                        "state": "RUNNABLE"
+                    },
+                    {
+                        "crashed": false,
+                        "id": "Timer-0",
+                        "number": 30583,
+                        "priority": 5,
+                        "stack": [
+                            {
+                                "class": "java.lang.Object",
+                                "file": "Object.java",
+                                "lineno": -2,
+                                "method": "wait"
+                            },
+                            {
+                                "class": "java.util.TimerThread",
+                                "file": "Timer.java",
+                                "lineno": 526,
+                                "method": "mainLoop"
+                            },
+                            {
+                                "class": "java.util.TimerThread",
+                                "file": "Timer.java",
+                                "lineno": 505,
+                                "method": "run"
+                            }
+                        ],
+                        "state": "WAITING"
+                    }
+                ],
+                "ts": 1498099527,
+                "uuid": "20217a21-2dd3-4cbd-8c46-a6b2ff3469e5"
+            }
+        ],
+        "header": {
+            "appid": "TZbafrPAmp1880722139",
+            "platform": "Android",
+            "pt": "crash",
+            "srid": "-1",
+            "tid": "JsVkXHdqTG1878285484"
+        }
+    }
+]
