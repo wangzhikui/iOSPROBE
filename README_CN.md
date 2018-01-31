@@ -1,18 +1,18 @@
 # IOS探针
 
 ## 说明
-iOSPROBE是一个swift开发的app探针，用于监控应用的数据并定时发送到服务器端。能采集的数据字段信息见最后的说明（最终以源码为主）
+iOSPROBE是一个swift开发的app探针，用于监控应用的数据并定时发送到服务器端。能采集的数据字段信息见最后的说明（最终以源码为主）
 * App信息
 * 设备信息
 * 网络请求信息
-* 崩溃CRASH信息
+* 崩溃CRASH信息
 * 卡顿ANR信息  
 
-目前能采集以上几大类数据，其中每个app和设备信息会在app启动，初始化探针的时候发送的云端，请查看iOSPROBE.swift文件中的源码。其他三类采集的数据会在CoreDelegate.swift中发送，三个代理方法均在这里边处理，查看源码即可知道发送了什么数据。数据有两种方式，一种缓存后1分钟发送一次，一种是立即发送，根据自己需要修改。  
+目前能采集以上几大类数据，其中每个app和设备信息会在app启动，初始化探针的时候发送的云端，请查看iOSPROBE.swift文件中的源码。其他三类采集的数据会在CoreDelegate.swift中发送，三个代理方法均在这里边处理，查看源码即可知道发送了什么数据。数据有两种方式，一种缓存后1分钟发送一次，一种是立即发送，根据自己需要修改。  
 
-## 使用方法
+## 使用方法
 
-### 1，下载源码
+### 1，下载源码
 ```git
 git clone git@git.yonyou.com:wangzhk/iOSPROBE.git
 ```
@@ -24,7 +24,7 @@ Development target 10.0
 swift language 3.2
 OC
 ```
-### 3，将包重新签名后，引入工程中
+### 3，将包重新签名后，引入工程中
 示例程序调试环境
 ```
 模拟器 ios11.1
@@ -72,14 +72,14 @@ int main(int argc, char * argv[]) {
 <img src="./README/image/ocset.png"  width="100%"/>
 
 ## 编译过程说明
-项目包含一个示例项目iOSPROBER_EXAMPLE，可使用该示例程序运行该工程测试  
+项目包含一个示例项目iOSPROBER_EXAMPLE，可使用该示例程序运行该工程测试  
 
 swift+OC混编 桥接需要将三个oc的头文件添加到heads中如图：  
 <img src="./README/image/headfile.png" width="100%"/>
 
 ## 源码修改
-探针默认是将采集到的数据直接print出来，如果需要发送的云端，需要改源码。  
-iOSPROBE.swift文件，修改里边的配置信息，根据注释修改即可
+探针默认是将采集到的数据直接print出来，如果需要发送的云端，需要改源码。  
+iOSPROBE.swift文件，修改里边的配置信息，根据注释修改即可
 ```swift
  @objc open class func openMonitor(tid:String,appid:String) {
         //初始化租户id  tid 应用id appid
@@ -115,7 +115,7 @@ print(jsonStr)
 ```
 
 ## 感谢
-本探针得得益于社区，部分框架代码直接使用的是开源项目，封装改造完善形成一个完整的监控探针分享给大家。开发过程也得到了github，cocoachina，简书，stackoverflow等社区上各大牛的指导。探针能基本满足日常的app监控，后续逐渐完善其他监控：如业务监控。也希望感兴趣的同仁联系我一起来完善
+本探针得得益于社区，部分框架代码直接使用的是开源项目，封装改造完善形成一个完整的监控探针分享给大家。开发过程也得到了github，cocoachina，简书，stackoverflow等社区上各大牛的指导。探针能基本满足日常的app监控，后续逐渐完善其他监控：如业务监控。也希望感兴趣的同仁联系我一起来完善
 
 ## 附接口格式
 **[探针发送云端接口格式](./README/INTERFACE.md)**  
