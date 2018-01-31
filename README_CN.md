@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         YYY.openMonitor(tid:"FtxuKMUUYm7901013387",appid:"isYGhdQJgf0539424036&")
         return true
     }
-}
+} 
 ```
 OC完整示例：   
 ```swift 

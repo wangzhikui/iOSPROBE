@@ -10,6 +10,7 @@
 		F95FBB85201EC47D0007A991 /* ANRMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FBB84201EC47D0007A991 /* ANRMonitor.swift */; };
 		F95FBB87202193210007A991 /* iOSPROBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FBB86202193210007A991 /* iOSPROBE.swift */; };
 		F95FBB89202193850007A991 /* CoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FBB88202193850007A991 /* CoreController.swift */; };
+		F95FBB8B2021A16B0007A991 /* README_CN.md in Resources */ = {isa = PBXBuildFile; fileRef = F95FBB8A2021A16B0007A991 /* README_CN.md */; };
 		F978844C1FFDCAEF00780BBD /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978844B1FFDCAEF00780BBD /* UITableView+.swift */; };
 		F978847520108B0300780BBD /* CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978847420108B0300780BBD /* CoreDelegate.swift */; };
 		F9788477201090AD00780BBD /* MonitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9788476201090AD00780BBD /* MonitorManager.swift */; };
@@ -98,6 +99,7 @@
 		F95FBB84201EC47D0007A991 /* ANRMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANRMonitor.swift; sourceTree = "<group>"; };
 		F95FBB86202193210007A991 /* iOSPROBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSPROBE.swift; sourceTree = "<group>"; };
 		F95FBB88202193850007A991 /* CoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreController.swift; sourceTree = "<group>"; };
+		F95FBB8A2021A16B0007A991 /* README_CN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_CN.md; sourceTree = "<group>"; };
 		F978844B1FFDCAEF00780BBD /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		F978847420108B0300780BBD /* CoreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDelegate.swift; sourceTree = "<group>"; };
 		F9788476201090AD00780BBD /* MonitorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorManager.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				F9E992AC1FF4903F007D6180 /* README.md */,
+				F95FBB8A2021A16B0007A991 /* README_CN.md */,
 				F9E991E51FF4818F007D6180 /* iOSPROBE */,
 				F9E991F01FF4818F007D6180 /* iOSPROBETests */,
 				F9E992761FF4831B007D6180 /* iOSPROBE_EXAMPLE */,
@@ -560,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E992AD1FF4903F007D6180 /* README.md in Resources */,
+				F95FBB8B2021A16B0007A991 /* README_CN.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
