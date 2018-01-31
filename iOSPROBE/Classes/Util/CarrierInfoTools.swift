@@ -2,7 +2,7 @@
 //  CarrierInfoTools.swift
 //  iOSPROBE
 //  获取运营商信息工具类
-//  Created by 王智魁 on 30/12/2017.
+//  Created by wangzhikui on 30/12/2017.
 //  Copyright © 2017 wangzhikui. All rights reserved.
 //
 

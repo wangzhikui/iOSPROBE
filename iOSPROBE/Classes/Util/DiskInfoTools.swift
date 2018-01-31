@@ -2,7 +2,7 @@
 //  DiskInfoTools.swift
 //  iOSPROBE
 //  获取磁盘空间
-//  Created by 王智魁 on 30/12/2017.
+//  Created by wangzhikui on 30/12/2017.
 //  Copyright © 2017 wangzhikui. All rights reserved.
 //
 

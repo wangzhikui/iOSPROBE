@@ -2,7 +2,7 @@
 //  MonitorManager.swift
 //  iOSPROBE
 //
-//  Created by 王智魁 on 18/01/2018.
+//  Created by wangzhikui on 18/01/2018.
 //  Copyright © 2018 wangzhikui. All rights reserved.
 //
 

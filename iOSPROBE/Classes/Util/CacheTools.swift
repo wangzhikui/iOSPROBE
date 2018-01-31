@@ -2,8 +2,8 @@
 //  CacheTools.swift
 //  iOSPROBE
 //  使用UserDefaults，可以修改成使用归档或者其他方式
-//  Created by 王智魁 on 28/12/2017.
-//  Copyright © 2017 友云音. All rights reserved.
+//  Created by wangzhikui on 28/12/2017.
+//  Copyright © 2017 wangzhikui. All rights reserved.
 //
 
 import Foundation

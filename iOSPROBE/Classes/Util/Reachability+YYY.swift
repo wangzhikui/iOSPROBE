@@ -2,7 +2,7 @@
 //  Reachability.swift
 //  iOSPROBE
 //
-//  Created by 王智魁 on 28/12/2017.
+//  Created by wangzhikui on 28/12/2017.
 //  Copyright © 2017 wangzhikui. All rights reserved.
 //  使用开源的一个类  Reachability.swift  为了防止与被监控app中冲突，改写了类的名称
 //

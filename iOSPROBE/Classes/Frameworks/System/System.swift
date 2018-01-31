@@ -11,19 +11,7 @@ private let HOST_BASIC_INFO_COUNT         : mach_msg_type_number_t =
     UInt32(MemoryLayout<host_basic_info_data_t>.size / MemoryLayout<integer_t>.size)
 
 open class System: NSObject {
-    
-    //--------------------------------------------------------------------------
-    // MARK: - OPEN PROPERTY
-    //--------------------------------------------------------------------------
-    
-//    open static let hardware = Hardware.classForCoder() as! Hardware.Type
-//    open static let cpu      = CPU.classForCoder() as! CPU.Type
     open static let memory   = Memory.classForCoder() as! Memory.Type
-//    open static let network  = Network.classForCoder() as! Network.Type
-    
-    //--------------------------------------------------------------------------
-    // MARK: - Internal PROPERTY
-    //--------------------------------------------------------------------------
     static var hostBasicInfo: host_basic_info {
         get {
             var size     = HOST_BASIC_INFO_COUNT
@@ -43,10 +31,6 @@ open class System: NSObject {
             return hostInfo
         }
     }
-    
-    //--------------------------------------------------------------------------
-    // MARK: - PRIVATE PROPERTY
-    //--------------------------------------------------------------------------
     static let machHost = mach_host_self()
 }
 

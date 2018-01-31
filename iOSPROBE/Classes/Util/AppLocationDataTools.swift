@@ -1,7 +1,7 @@
 //
 //  AppLocationDataTools.swift
 //
-//  Created by 王智魁 on 23/12/2017.
+//  Created by wangzhikui on 23/12/2017.
 //
 
 import Foundation

@@ -82,12 +82,12 @@ private func SwizzleMethod(origClass:AnyClass!,origSelector: Selector,toAlterSel
     
     
     
-    let didadd = class_addMethod(origClass,
+    _ = class_addMethod(origClass,
                                  origSelector,method_getImplementation(origMethod),
                                  method_getTypeEncoding(origMethod))
     
     
-    let didadd2 = class_addMethod(alterClass,
+    _ = class_addMethod(alterClass,
                                   alterSelector,method_getImplementation(altMethod),
                                   method_getTypeEncoding(altMethod))
     
