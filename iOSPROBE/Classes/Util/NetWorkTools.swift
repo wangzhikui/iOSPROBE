@@ -37,7 +37,7 @@ class NetworkTools {
 //                {"errordetailmsg": "","errormsg": "license校验失败","statuscode": "1001"}
                 if dic.value(forKey: "statuscode") != nil{
                     let code : String = dic.value(forKey: "statuscode") as! String
-                    //发送请求成功判断返回结果是否是租户已经禁用，或者其他标识认为不需要发送数据
+                    //发送请求成功判断返回结果是否停止采集，在某种情况下云端返回一个标识码，让App探针停止采集
                     if "1001" == code{
                         BaseInfoTools.stopMonitor()
                     }

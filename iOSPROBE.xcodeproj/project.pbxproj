@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F95FBB85201EC47D0007A991 /* ANRMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FBB84201EC47D0007A991 /* ANRMonitor.swift */; };
+		F95FBB87202193210007A991 /* iOSPROBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FBB86202193210007A991 /* iOSPROBE.swift */; };
+		F95FBB89202193850007A991 /* CoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95FBB88202193850007A991 /* CoreController.swift */; };
 		F978844C1FFDCAEF00780BBD /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978844B1FFDCAEF00780BBD /* UITableView+.swift */; };
 		F978847520108B0300780BBD /* CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978847420108B0300780BBD /* CoreDelegate.swift */; };
 		F9788477201090AD00780BBD /* MonitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9788476201090AD00780BBD /* MonitorManager.swift */; };
@@ -24,8 +26,6 @@
 		F9E9923A1FF48209007D6180 /* Thread+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E992061FF48209007D6180 /* Thread+.swift */; };
 		F9E9923D1FF4820A007D6180 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E992091FF48209007D6180 /* Double+.swift */; };
 		F9E9923E1FF4820A007D6180 /* AppLocationDataTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E9920A1FF48209007D6180 /* AppLocationDataTools.swift */; };
-		F9E992411FF4820A007D6180 /* YYY.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E9920D1FF48209007D6180 /* YYY.swift */; };
-		F9E992431FF4820A007D6180 /* YYYController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E992101FF48209007D6180 /* YYYController.swift */; };
 		F9E9924E1FF4820A007D6180 /* BSBacktraceLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E9921F1FF48209007D6180 /* BSBacktraceLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9E9924F1FF4820A007D6180 /* AppBacktrace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E992201FF48209007D6180 /* AppBacktrace.swift */; };
 		F9E992501FF4820A007D6180 /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E992211FF48209007D6180 /* BSBacktraceLogger.m */; };
@@ -96,6 +96,8 @@
 
 /* Begin PBXFileReference section */
 		F95FBB84201EC47D0007A991 /* ANRMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANRMonitor.swift; sourceTree = "<group>"; };
+		F95FBB86202193210007A991 /* iOSPROBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSPROBE.swift; sourceTree = "<group>"; };
+		F95FBB88202193850007A991 /* CoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreController.swift; sourceTree = "<group>"; };
 		F978844B1FFDCAEF00780BBD /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		F978847420108B0300780BBD /* CoreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDelegate.swift; sourceTree = "<group>"; };
 		F9788476201090AD00780BBD /* MonitorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorManager.swift; sourceTree = "<group>"; };
@@ -115,8 +117,6 @@
 		F9E992061FF48209007D6180 /* Thread+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread+.swift"; sourceTree = "<group>"; };
 		F9E992091FF48209007D6180 /* Double+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		F9E9920A1FF48209007D6180 /* AppLocationDataTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocationDataTools.swift; sourceTree = "<group>"; };
-		F9E9920D1FF48209007D6180 /* YYY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYY.swift; sourceTree = "<group>"; };
-		F9E992101FF48209007D6180 /* YYYController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYYController.swift; sourceTree = "<group>"; };
 		F9E9921F1FF48209007D6180 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		F9E992201FF48209007D6180 /* AppBacktrace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBacktrace.swift; sourceTree = "<group>"; };
 		F9E992211FF48209007D6180 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 			children = (
 				F9E991FE1FF48209007D6180 /* Classes */,
 				F9E991E61FF4818F007D6180 /* iOSPROBE.h */,
-				F9E9920D1FF48209007D6180 /* YYY.swift */,
+				F95FBB86202193210007A991 /* iOSPROBE.swift */,
 				F9E991E71FF4818F007D6180 /* Info.plist */,
 			);
 			path = iOSPROBE;
@@ -277,7 +277,7 @@
 		F9E9920E1FF48209007D6180 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F9E992101FF48209007D6180 /* YYYController.swift */,
+				F95FBB88202193850007A991 /* CoreController.swift */,
 				F978847420108B0300780BBD /* CoreDelegate.swift */,
 				F9788476201090AD00780BBD /* MonitorManager.swift */,
 			);
@@ -605,18 +605,19 @@
 				F9E992BB1FF77A81007D6180 /* DiskInfoTools.swift in Sources */,
 				F9E9925A1FF4820A007D6180 /* Network.swift in Sources */,
 				F9E992571FF4820A007D6180 /* NetworkFlow.swift in Sources */,
-				F9E992431FF4820A007D6180 /* YYYController.swift in Sources */,
 				F9E992541FF4820A007D6180 /* URLSession+.swift in Sources */,
 				F978847D2010A88300780BBD /* NetworkModel.swift in Sources */,
 				F9E992361FF48209007D6180 /* NetWorkTools.swift in Sources */,
 				F978847B2010A5C500780BBD /* MonitorProtocol.swift in Sources */,
 				F9E9923D1FF4820A007D6180 /* Double+.swift in Sources */,
 				F9E9923A1FF48209007D6180 /* Thread+.swift in Sources */,
+				F95FBB89202193850007A991 /* CoreController.swift in Sources */,
 				F978844C1FFDCAEF00780BBD /* UITableView+.swift in Sources */,
 				F97884812010C29000780BBD /* CrashModel.swift in Sources */,
 				F95FBB85201EC47D0007A991 /* ANRMonitor.swift in Sources */,
 				F9788477201090AD00780BBD /* MonitorManager.swift in Sources */,
 				F9E9925B1FF4820A007D6180 /* Hardware.swift in Sources */,
+				F95FBB87202193210007A991 /* iOSPROBE.swift in Sources */,
 				F9E9925F1FF4820A007D6180 /* CPU.swift in Sources */,
 				F9E992AF1FF4B0EE007D6180 /* CacheTools.swift in Sources */,
 				F9E992B11FF4CF64007D6180 /* Reachability+YYY.swift in Sources */,
@@ -633,7 +634,6 @@
 				F9E992521FF4820A007D6180 /* AppSwizzle.swift in Sources */,
 				F9E9924F1FF4820A007D6180 /* AppBacktrace.swift in Sources */,
 				F9E9923E1FF4820A007D6180 /* AppLocationDataTools.swift in Sources */,
-				F9E992411FF4820A007D6180 /* YYY.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

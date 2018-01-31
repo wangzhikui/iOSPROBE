@@ -1,13 +1,15 @@
 //
-//  YYYController.swift
+//  CoreController.swift
+//  iOSPROBE
 //
-//  Created by 王智魁 on 25/12/2017.
+//  Created by 王智魁 on 31/01/2018.
+//  Copyright © 2018 wangzhikui. All rights reserved.
 //
 
 import Foundation
 
-class YYYController : NSObject{
-    @objc static let shared = YYYController()
+class CoreController : NSObject{
+    @objc static let shared = CoreController()
     //定时发送数据和获取地理位置的时间间隔 单位s
     //对于采集到的数据先存储在缓存中，每隔一段时间发送给云端，这里定义时间间隔
     //获取地理位置的时间间隔也一样，当然这里可以自由扩展将两个时间间隔分开定义，获取地理位置的间隔应该长一点
@@ -27,7 +29,7 @@ class YYYController : NSObject{
         MonitorManager.shared.openCrashMonitor()
         MonitorManager.shared.openANRMonitor()
         //hook
-//        UITableView.open()
+        //        UITableView.open()
     }
     //开始监控网络是否可用及连接方式
     @objc func startNetWorkNotifier(){
@@ -102,4 +104,3 @@ class YYYController : NSObject{
         }
     }
 }
-

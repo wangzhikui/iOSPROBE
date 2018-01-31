@@ -16,12 +16,9 @@ open class System: NSObject {
     // MARK: - OPEN PROPERTY
     //--------------------------------------------------------------------------
     
-    open static let hardware = Hardware.classForCoder() as! Hardware.Type 
-    
+//    open static let hardware = Hardware.classForCoder() as! Hardware.Type
 //    open static let cpu      = CPU.classForCoder() as! CPU.Type
-    
     open static let memory   = Memory.classForCoder() as! Memory.Type
-    
 //    open static let network  = Network.classForCoder() as! Network.Type
     
     //--------------------------------------------------------------------------
@@ -52,3 +49,4 @@ open class System: NSObject {
     //--------------------------------------------------------------------------
     static let machHost = mach_host_self()
 }
+
