@@ -13,9 +13,9 @@ open class YYY: NSObject {
         BaseInfoTools.appid = appid
         //初始化发送云端服务器地址，host是在网络监控的时候用来判断获取到的url地址是不是我们自己的地址
         //探针发送数据到服务器的过程不需要监控
-        NetworkTools.host = "ycm.yonyou.com"
+        NetworkTools.host = "www.wushuning.com"
         //云端接收数据的地址
-        NetworkTools.url = "http://ycm.yonyou.com/send/api/mobile"
+        NetworkTools.url = "http://www.wushuning.com/send/api/mobile"
         //anr判定的阀值 传入2s
         BaseInfoTools.threadhold = 2.0
         //初始化探针版本和名称
