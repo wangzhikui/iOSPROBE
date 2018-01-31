@@ -1,7 +1,14 @@
 # IOS探针
 
 ## 说明
-iOSPROBE是一个swift开发的app探针，用于监控应用的数据并定时发送到服务器端。能采集的数据信息见最后的说明
+iOSPROBE是一个swift开发的app探针，用于监控应用的数据并定时发送到服务器端。能采集的数据字段信息见最后的说明（最终以源码为主）
+* App信息
+* 设备信息
+* 网络请求信息
+* 崩溃CRASH信息
+* 卡顿ANR信息  
+
+目前能采集以上几大类数据，其中每个app和设备信息会在app启动，初始化探针的时候发送的云端，请查看iOSPROBE.swift文件中的源码。其他三类采集的数据会在CoreDelegate.swift中发送，三个代理方法均在这里边处理，查看源码即可知道发送了什么数据。数据有两种方式，一种缓存后1分钟发送一次，一种是立即发送，根据自己需要修改。  
 
 ## 使用方法
 
@@ -70,11 +77,47 @@ int main(int argc, char * argv[]) {
 swift+OC混编 桥接需要将三个oc的头文件添加到heads中如图：  
 <img src="./README/image/headfile.png" width="100%"/>
 
-
-## 附接口格式
-    
-**[探针发送云端接口格式](./README/INTERFACE.md)**  
-**[能采集的主要数据字段说明](./README/METADATA.md)** 
+## 源码修改
+探针默认是将采集到的数据直接print出来，如果需要发送的云端，需要改源码。  
+iOSPROBE.swift文件，修改里边的配置信息，根据注释修改即可
+```swift
+ @objc open class func openMonitor(tid:String,appid:String) {
+        //初始化租户id  tid 应用id appid
+        BaseInfoTools.tid = tid
+        BaseInfoTools.appid = appid
+        //初始化发送云端服务器地址，host是在网络监控的时候用来判断获取到的url地址是不是我们自己的地址
+        //探针发送数据到服务器的过程不需要监控
+        NetworkTools.host = "www.wushuning.com"
+        //云端接收数据的地址
+        NetworkTools.url = "http://www.wushuning.com/send/api/mobile"
+        //anr判定的阀值 传入2s
+        BaseInfoTools.threadhold = 2.0
+        //初始化探针版本和名称
+        BaseInfoTools.agentName = "iOSPROBE"
+        BaseInfoTools.agentVersion = "1.0.0.20180101_beta"
+        //发送app和device数据到云端 探针启动的时候就发送，这里可以根据自己的需要修改！！！！！注意修改
+        BaseInfoTools.sendAppInfo(tid: tid, appid: appid)
+        BaseInfoTools.sendDeviceInfo(tid: tid, appid: appid)
+        //        UITableView.open()
+        //打开监控，首先判断是否可以发送数据，该标志位会在，每次发送数据到云端的返回信息中获取并更新
+        if BaseInfoTools.isDataCanSend {
+            CoreController.shared.openMonitor()
+        }
+    }
+```
+CoreDelegate.swift包含三个代理，查看方法的最后如下。加入缓存，直接发送，还是print查看，根据自己需要修改即可。如果要发送到云端，需要在上面的文件中配置相关的地址信息
+```swift
+//加入任务队列
+//CacheTools.shared.setCacheForBusi(value: jsonStr, key: CacheTools.shared.NETWORK)
+//直接发送请求
+//NetworkTools.postCommon(jsonStr: jsonStr)
+print(jsonStr)
+```
 
 ## 感谢
 本探针得得益于社区，部分框架代码直接使用的是开源项目，封装改造完善形成一个完整的监控探针分享给大家。开发过程也得到了github，cocoachina，简书，stackoverflow等社区上各大牛的指导。探针能基本满足日常的app监控，后续逐渐完善其他监控：如业务监控。也希望感兴趣的同仁联系我一起来完善
+
+## 附接口格式
+**[探针发送云端接口格式](./README/INTERFACE.md)**  
+**[能采集的主要数据字段说明](./README/METADATA.md)** 
+
