@@ -56,7 +56,8 @@ extension CoreDelegate: NetworkMonitorDelegate {
         //加入任务队列
         //CacheTools.shared.setCacheForBusi(value: jsonStr, key: CacheTools.shared.NETWORK)
         //直接发送请求
-        //NetworkTools.postCommon(jsonStr: jsonStr)
+//        NetworkTools.postCommon(jsonStr: jsonStr)
+        print(jsonStr)
     }
 }
 //MARK: - CrashEye
@@ -128,14 +129,15 @@ extension CoreDelegate: CrashMonitorDelegate {
         //加入任务队列
         //CacheTools.shared.setCacheForBusi(value: jsonStr, key: CacheTools.shared.CRASH)
         //直接发送请求
-        //NetworkTools.postCommon(jsonStr: jsonStr)
+//        NetworkTools.postCommon(jsonStr: jsonStr)
+        print(jsonStr)
         
     }
 }
 //MARK: - ANREye
 extension CoreDelegate: ANRMonitorDelegate {
     //ANREye的回调
-    func anrEye(catchWithThreshold threshold:Double,mainThreadBacktrace:String?,allThreadBacktrace:String?) {
+    func anrMonitorDispatch(catchWithThreshold threshold:Double,mainThreadBacktrace:String?,allThreadBacktrace:String?) {
         //拼接成字符串向外发送
         let tid = BaseInfoTools.tid //租户id
         let appid = BaseInfoTools.appid //应用id
@@ -169,6 +171,7 @@ extension CoreDelegate: ANRMonitorDelegate {
         //加入任务队列
         //CacheTools.shared.setCacheForBusi(value: jsonStr, key: CacheTools.shared.ANR)
         //直接发送请求
-        //NetworkTools.postCommon(jsonStr: jsonStr)
+//        NetworkTools.postCommon(jsonStr: jsonStr)
+        print(jsonStr)
     }
 }

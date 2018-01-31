@@ -47,7 +47,7 @@ extension MonitorManager {
 extension MonitorManager {
     @objc func openANRMonitor() {
         //传入阀值 2s
-        self.anrMonitor.startMonitor(with: 2)
+        self.anrMonitor.startMonitor(with: BaseInfoTools.threadhold)
     }
     @objc func closeANRMonitor() {
         self.anrMonitor.stopMonitor()

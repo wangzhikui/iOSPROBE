@@ -29,6 +29,8 @@ class BaseInfoTools{
     static var isDataCanSend = true
     //发送数据的定时任务实例，全局保存，便于停止
     static var sendDataTimer:Timer!
+    //anr 判定的阀值 默认2s
+    static var threadhold :Double = 2.0
     //停止所有监控
     class func stopMonitor(){
         //将是否能发送数据标志设置为 false
@@ -63,7 +65,7 @@ class BaseInfoTools{
     }
     //MARK: 发送app信息到服务器
     class func sendAppInfo(tid:String,appid:String){
-        //拼接成字符串向外发送 wangzhk
+        //拼接成字符串向外发送
         let displayName = self.getAppInfo(type: "displayName")
         let appVersion = self.getAppInfo(type: "appVersion")
         let jsonStr = "[{\"header\":{ \"tid\":\"\(tid)\",\"appid\":\"\(appid)\",\"pt\":\"app\",\"srid\":\"-1\",\"platform\":\"ios\"},\"content\":[{\"name\": \"\(displayName)\",\"packageid\": \"\",\"version\": \"\(appVersion)\"}]}]"
