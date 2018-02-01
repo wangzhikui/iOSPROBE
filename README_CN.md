@@ -20,14 +20,14 @@ git clone git@git.yonyou.com:wangzhk/iOSPROBE.git
 开发环境
 ```
 Xode 9.1
-Development target 10.0
+Development target 8.0
 swift language 3.2
 OC
 ```
 ### 3，将包重新签名后，引入工程中
 示例程序调试环境
 ```
-模拟器 ios11.1
+模拟器 ios11.1 iphone 8 plus
 真机 iphone 6s  ios 10.3.3
 ```
 ### 4，在app入口方法处加入如下代码
