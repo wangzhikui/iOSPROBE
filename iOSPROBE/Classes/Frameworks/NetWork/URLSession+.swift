@@ -32,7 +32,7 @@ extension URLSession {
     }
     //hook URLSession的init方法
     private class func hook() -> SwizzleResult {
-        let orig = Selector("initWithConfiguration:delegate:delegateQueue:")
+        let orig = Selector(("initWithConfiguration:delegate:delegateQueue:"))
         let alter = #selector(URLSession.init(configurationMonitor:delegate:delegateQueue:))
         let result = URLSession.swizzleInstanceMethod(origSelector: orig, toAlterSelector: alter)
         return result

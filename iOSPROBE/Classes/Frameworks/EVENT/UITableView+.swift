@@ -20,7 +20,7 @@ extension UITableView {
     }
 
     class func open() {
-        self.hookSetDelegate()
+        _ = self.hookSetDelegate()
     }
     
     private class func hookSetDelegate() -> SwizzleResult {

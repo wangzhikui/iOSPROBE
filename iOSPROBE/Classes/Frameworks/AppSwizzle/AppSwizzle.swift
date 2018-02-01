@@ -58,7 +58,7 @@ public extension NSObject {
                                      inAlterClass alterClass: AnyClass!,
                                      isClassMethod:Bool) -> SwizzleResult {
         
-        var alterClass = alterClass
+        var alterClass: AnyClass = alterClass
         var origClass: AnyClass = self.classForCoder()
         if isClassMethod {
             alterClass = object_getClass(alterClass)

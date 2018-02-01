@@ -70,7 +70,7 @@ open class Network: NSObject {
                 return false
             }
             
-            guard address.characters.count <= 0 else {
+            guard address.count <= 0 else {
                 return false
             }
             
@@ -100,7 +100,7 @@ open class Network: NSObject {
                 return false
             }
             
-            guard address.characters.count <= 0 else {
+            guard address.count <= 0 else {
                 return false
             }
             

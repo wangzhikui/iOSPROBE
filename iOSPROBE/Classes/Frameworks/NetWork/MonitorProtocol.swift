@@ -84,7 +84,6 @@ extension MonitorProtocol {
         req.addValue("MOBILE".appending(UUID().uuidString), forHTTPHeaderField: "busiid")
         return req.copy() as! URLRequest
     }
-    
     override func startLoading() {
         let request = MonitorProtocol.canonicalRequest(for: self.request)
         self.connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
