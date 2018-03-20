@@ -11,7 +11,7 @@ import Foundation
 open class iOSPROBE: NSObject {
     //对外暴露的方法，在此方法中做一些基本的初始化工作，这里可以传入app的一些参数，如唯一标识app的appid，和token校验码 tid
     @objc open class func openMonitor(tid:String,appid:String) {
-        //初始化租户id  tid 应用id appid
+        //初始化token id 应用id appid
         BaseInfoTools.tid = tid
         BaseInfoTools.appid = appid
         //初始化发送云端服务器地址，host是在网络监控的时候用来判断获取到的url地址是不是我们自己的地址
